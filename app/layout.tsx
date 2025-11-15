@@ -23,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nuntioSans.variable} antialiased`}>{children}</body>
+      <body className={`${nuntioSans.variable} antialiased`}>
+        {children}
+        <div id="portal-root" />
+      </body>
     </html>
   );
 }

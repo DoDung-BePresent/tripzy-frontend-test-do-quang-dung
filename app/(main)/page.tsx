@@ -1,4 +1,8 @@
+/**
+ * Node modules
+ */
 import { Icon } from "@/components/ui/icon";
+import { BusAndShuttleForm } from "@/components/bus-and-shuttle-form";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const HomePage = () => {
@@ -47,7 +51,9 @@ const HomePage = () => {
             </TabsList>
           </div>
           <div className="">
-            <TabsContent value="bus-and-shuttle">Bus & Shuttle</TabsContent>
+            <TabsContent value="bus-and-shuttle">
+              <BusAndShuttleForm />
+            </TabsContent>
             <TabsContent value="hotel-and-accommodation">
               <p className="text-foreground-secondary text-center">No Data</p>
             </TabsContent>
