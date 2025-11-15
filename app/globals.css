@@ -11,9 +11,11 @@
 
   --secondary: #e8fbcc;
   --secondary-dark: #447a11;
+  --secondary-light: #f4ffeb;
 
   --tertiary: #e1edfe;
   --tertiary-dark: #5664e1;
+  --tertiary-light: #ebf4ff;
 
   --accent: #f5f8ff;
 
@@ -34,9 +36,11 @@
 
   --color-secondary: var(--secondary);
   --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-light: var(--secondary-light);
 
   --color-tertiary: var(--tertiary);
   --color-tertiary-dark: var(--tertiary-dark);
+  --color-tertiary-light: var(--tertiary-light);
 
   --color-background: var(--background);
   --color-surface: var(--surface);
@@ -50,8 +54,8 @@
   --color-foreground-secondary: var(--foreground-secondary);
   --color-foreground-muted: var(--foreground-muted);
 
-  --shadow-sm: 0px 4px 12px 0px #2050761f;
-  --shadow-md: 0px 8px 32px 0px #2050761f;
+  --shadow-level-2: 0px 4px 12px 0px #2050761f;
+  --shadow-level-3: 0px 8px 32px 0px #2050761f;
 }
 
 @layer base {
