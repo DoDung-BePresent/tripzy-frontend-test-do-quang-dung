@@ -16,10 +16,11 @@ export const DatePicker = (props: DatePickerProps) => {
     setSelected(value ?? null);
   }, [value]);
 
-  const handleCalendarChange = (dates: any) => {
+  const handleCalendarChange = (dates: any, dateStrings: any, info: any) => {
     if (dates && dates[0]) {
       const picked = dates[0];
       setSelected(picked);
+
       try {
         onChange?.(
           picked,
@@ -28,7 +29,8 @@ export const DatePicker = (props: DatePickerProps) => {
       } catch {
         onChange?.(picked);
       }
-      setOpen(false);
+
+      setTimeout(() => setOpen(false), 0);
     }
   };
 
@@ -39,7 +41,7 @@ export const DatePicker = (props: DatePickerProps) => {
         open={open}
         onOpenChange={(o: boolean) => setOpen(o)}
         allowEmpty={[true, true]}
-        value={selected ? [selected, selected] : undefined}
+        value={selected ? [selected, null] : [null, null]}
         onCalendarChange={handleCalendarChange}
         showTime={showTime}
         className={cn("custom-datepicker", className)}

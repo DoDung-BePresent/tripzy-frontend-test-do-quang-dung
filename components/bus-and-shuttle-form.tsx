@@ -53,7 +53,7 @@ export const BusAndShuttleForm = () => {
               suffixIcon={null}
               prefix={<Icon name="calendar" size={18} className="mr-2 ml-1" />}
               placeholder="DD / MM / YYYY 00:00"
-              className="min-w-56!"
+              className="min-w-60!"
             />
           </Form.Item>
         </div>

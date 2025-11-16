@@ -24,6 +24,8 @@
 
   --border: #cccfd5;
 
+  --danger: #c30808;
+
   --bg-disabled: #2426281a;
 }
 
@@ -49,6 +51,7 @@
   --color-border: var(--border);
 
   --color-bg-disabled: var(--bg-disabled);
+  --color-danger: var(--danger);
 
   --color-foreground: var(--foreground);
   --color-foreground-secondary: var(--foreground-secondary);

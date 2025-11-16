@@ -39,6 +39,10 @@ export default function RootLayout({
               },
               DatePicker: {
                 cellActiveWithRangeBg: "transparent",
+                colorPrimary: "var(--primary)",
+              },
+              Select: {
+                colorPrimary: "var(--primary)",
               },
             },
           }}
