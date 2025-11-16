@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import "@ant-design/v5-patch-for-react-19";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
-import { ConfigProvider } from "antd";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
+
+/**
+ * Providers
+ */
+import { AntConfigProvider } from "@/providers/ant-config-provider";
 
 const nuntioSans = Nunito_Sans({
   variable: "--font-nuntio-sans",
@@ -25,30 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nuntioSans.variable} antialiased`}>
-        <ConfigProvider
-          theme={{
-            token: {
-              controlHeightLG: 52,
-              fontFamily: "var(--font-nuntio-sans)",
-            },
-            components: {
-              Form: {
-                inlineItemMarginBottom: 10,
-                labelHeight: "10px !important",
-                labelColor: "var(--foreground-muted)",
-              },
-              DatePicker: {
-                cellActiveWithRangeBg: "transparent",
-                colorPrimary: "var(--primary)",
-              },
-              Select: {
-                colorPrimary: "var(--primary)",
-              },
-            },
-          }}
-        >
-          {children}
-        </ConfigProvider>
+        <AntdRegistry>
+          <AntConfigProvider>{children}</AntConfigProvider>
+        </AntdRegistry>
       </body>
     </html>
   );

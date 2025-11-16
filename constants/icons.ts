@@ -22,7 +22,7 @@ export const icons = {
   plane: { component: PlaneIcon, viewBox: "0 0 26 26" },
   hotel: { component: HotelIcon, viewBox: "0 0 21 21" },
   search: { component: SearchIcon, viewBox: "0 0 24 24" },
-  user: { component: UserIcon, viewBox: "0 0 24 24" },
+  user: { component: UserIcon, viewBox: "0 0 17 15" },
   transfer: { component: TransferIcon, viewBox: "0 0 19 17" },
 };
 
