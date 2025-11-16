@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { ConfigProvider } from "antd";
 
 const nuntioSans = Nunito_Sans({
   variable: "--font-nuntio-sans",
@@ -24,8 +25,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nuntioSans.variable} antialiased`}>
-        {children}
-        <div id="portal-root" />
+        <ConfigProvider
+          theme={{
+            token: {
+              controlHeightLG: 52,
+              fontFamily: "var(--font-nuntio-sans)",
+            },
+            components: {
+              Form: {
+                inlineItemMarginBottom: 10,
+                labelHeight: "10px !important",
+                labelColor: "var(--foreground-muted)",
+              },
+            },
+          }}
+        >
+          {children}
+        </ConfigProvider>
       </body>
     </html>
   );

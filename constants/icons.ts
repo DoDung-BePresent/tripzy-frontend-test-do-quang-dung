@@ -9,6 +9,7 @@ import PlaneIcon from "@/assets/icons/plane-icon.svg";
 import HotelIcon from "@/assets/icons/hotel-icon.svg";
 import SearchIcon from "@/assets/icons/search-icon.svg";
 import UserIcon from "@/assets/icons/user-icon.svg";
+import TransferIcon from "@/assets/icons/line-transfer-icon.svg";
 
 export const icons = {
   bus: { component: BusIcon, viewBox: "0 0 23 21" },
@@ -22,6 +23,7 @@ export const icons = {
   hotel: { component: HotelIcon, viewBox: "0 0 21 21" },
   search: { component: SearchIcon, viewBox: "0 0 24 24" },
   user: { component: UserIcon, viewBox: "0 0 24 24" },
+  transfer: { component: TransferIcon, viewBox: "0 0 19 17" },
 };
 
 export type IconName = keyof typeof icons;
