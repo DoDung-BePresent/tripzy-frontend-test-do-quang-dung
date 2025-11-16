@@ -13,7 +13,7 @@ import TransferIcon from "@/assets/icons/line-transfer-icon.svg";
 
 export const icons = {
   bus: { component: BusIcon, viewBox: "0 0 23 21" },
-  calendar: { component: CalendarIcon, viewBox: "0 0 24 24" },
+  calendar: { component: CalendarIcon, viewBox: "0 0 16 15" },
   check: { component: CheckIcon, viewBox: "0 0 12 9" },
   chevronDown: { component: ChevronDownIcon, viewBox: "0 0 24 24" },
   chevronLeft: { component: ChevronLeftIcon, viewBox: "0 0 24 24" },

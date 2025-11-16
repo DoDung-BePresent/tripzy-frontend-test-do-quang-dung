@@ -37,6 +37,9 @@ export default function RootLayout({
                 labelHeight: "10px !important",
                 labelColor: "var(--foreground-muted)",
               },
+              DatePicker: {
+                cellActiveWithRangeBg: "transparent",
+              },
             },
           }}
         >

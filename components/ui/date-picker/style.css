@@ -1,2 +1,17 @@
 .custom-datepicker {
+  .ant-picker-separator {
+    display: none !important;
+  }
+  .ant-picker-input:nth-child(4) {
+    width: 0px;
+  }
+  .ant-picker-active-bar {
+    display: none;
+  }
+}
+
+.ant-picker-dropdown {
+  .ant-picker-cell .ant-picker-cell-inner {
+    border-radius: 5px !important;
+  }
 }

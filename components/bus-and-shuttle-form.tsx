@@ -16,6 +16,7 @@ import { locations } from "@/constants/locations";
 import { Select } from "@/components/ui/select";
 import { Icon } from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
+import { DatePicker } from "@/components/ui/date-picker";
 
 export const BusAndShuttleForm = () => {
   return (
@@ -45,6 +46,14 @@ export const BusAndShuttleForm = () => {
               suffixIcon={null}
               // options={locations}
               placeholder="Enter city, terminal,..."
+            />
+          </Form.Item>
+          <Form.Item label="DEPARTURE DATE">
+            <DatePicker
+              suffixIcon={null}
+              prefix={<Icon name="calendar" size={18} className="mr-2 ml-1" />}
+              placeholder="DD / MM / YYYY 00:00"
+              className="min-w-56!"
             />
           </Form.Item>
         </div>
