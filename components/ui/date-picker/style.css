@@ -44,6 +44,6 @@
     tr
     td.ant-picker-cell.ant-picker-cell-in-view:nth-last-child(-n + 2)
     .ant-picker-cell-inner {
-    color: var(--danger) !important;
+    color: var(--danger);
   }
 }

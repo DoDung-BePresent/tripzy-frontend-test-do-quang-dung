@@ -21,7 +21,7 @@ export const icons = {
   chevronUp: { component: ChevronUpIcon, viewBox: "0 0 24 24" },
   plane: { component: PlaneIcon, viewBox: "0 0 26 26" },
   hotel: { component: HotelIcon, viewBox: "0 0 21 21" },
-  search: { component: SearchIcon, viewBox: "0 0 24 24" },
+  search: { component: SearchIcon, viewBox: "0 0 16 16" },
   user: { component: UserIcon, viewBox: "0 0 17 15" },
   transfer: { component: TransferIcon, viewBox: "0 0 19 17" },
 };

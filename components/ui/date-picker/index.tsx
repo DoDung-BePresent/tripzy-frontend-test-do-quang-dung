@@ -16,7 +16,7 @@ export const DatePicker = (props: DatePickerProps) => {
     setSelected(value ?? null);
   }, [value]);
 
-  const handleCalendarChange = (dates: any, dateStrings: any, info: any) => {
+  const handleCalendarChange = (dates: any) => {
     if (dates && dates[0]) {
       const picked = dates[0];
       setSelected(picked);
@@ -24,13 +24,24 @@ export const DatePicker = (props: DatePickerProps) => {
       try {
         onChange?.(
           picked,
-          picked ? picked.format?.("YYYY-MM-DD HH:mm:ss") : "",
+          picked ? picked.format?.("YYYY-MM-DD") : "",
         );
       } catch {
         onChange?.(picked);
       }
 
       setTimeout(() => setOpen(false), 0);
+    }
+  };
+
+  const handleChange = (dates: any) => {
+    if (!dates || (Array.isArray(dates) && !dates[0])) {
+      setSelected(null);
+      try {
+        onChange?.(null, "");
+      } catch {
+        onChange?.(null);
+      }
     }
   };
 
@@ -43,6 +54,7 @@ export const DatePicker = (props: DatePickerProps) => {
         allowEmpty={[true, true]}
         value={selected ? [selected, null] : [null, null]}
         onCalendarChange={handleCalendarChange}
+        onChange={handleChange}
         showTime={showTime}
         className={cn("custom-datepicker", className)}
         style={{ ...(style as React.CSSProperties) }}
@@ -51,4 +63,3 @@ export const DatePicker = (props: DatePickerProps) => {
     </div>
   );
 };
-// Huhu 3:00 AM, I want give up :<

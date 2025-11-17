@@ -12,6 +12,7 @@ export const AntConfigProvider = ({
           controlHeightLG: 52,
           fontFamily: "var(--font-nuntio-sans)",
           colorBgContainerDisabled: "var(--bg-disabled)",
+          fontSizeLG: 14,
         },
         components: {
           Form: {
@@ -30,9 +31,14 @@ export const AntConfigProvider = ({
             // FIXME: colorPrimary repeat too muchhhh! Ahhhh
             colorPrimary: "var(--primary)",
             colorPrimaryBg: "var(--primary)",
+            colorText: "var(--foreground-muted)",
           },
           InputNumber: {
             colorPrimary: "var(--primary)",
+          },
+          Button: {
+            colorPrimary: "var(--primary)",
+            borderRadiusLG: 99,
           },
         },
       }}
