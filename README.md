@@ -53,6 +53,28 @@ For this project, I chose Ant Design as the primary component library. It offers
 
 ## Folder Structure
 
+```
+.
+├── app/
+│   └── globals.css
+├── components/
+│   └── ui/
+│       ├── date-picker/
+│       │   ├── index.tsx
+│       │   └── style.css
+│       └── ... (other wrapped components)
+├── constants/
+│   ├── locations.ts
+│   └── icons.ts
+├── data/
+│   └── locations.json
+├── assets/
+│   └── icons/
+├── libs/
+└── providers/
+    └── ant-config-provider.tsx
+```
+
 - `app/` - The Next.js app directory. It contains `globals.css`, which defines reusable color variables and global styles.
 - `components/` - Contains all React components.
   - `ui/` - This directory is key to the project's architecture. It holds **wrapper components** designed to customize Ant Design's default components. Each component (e.g., `date-picker`, `select`, `input-number`, v.v) is organized into its own folder, which includes:
