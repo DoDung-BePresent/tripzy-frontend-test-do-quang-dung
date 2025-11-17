@@ -131,7 +131,7 @@ export const BusAndShuttleForm = () => {
           icon={
             <Icon name="transfer" size={20} className="text-primary! mt-1" />
           }
-          className="shadow-level-2!"
+          className="shadow-level-2! hover:border-primary! border-transparent!"
           onClick={() => {
             const from = form.getFieldValue("from");
             const to = form.getFieldValue("to");

@@ -23,22 +23,30 @@ export const AntConfigProvider = ({
           DatePicker: {
             cellActiveWithRangeBg: "transparent",
             colorPrimary: "var(--primary)",
+            hoverBorderColor: "var(--primary)",
           },
           Select: {
             colorPrimary: "var(--primary)",
+            hoverBorderColor: "var(--primary)",
           },
           Checkbox: {
             // FIXME: colorPrimary repeat too muchhhh! Ahhhh
             colorPrimary: "var(--primary)",
             colorPrimaryBg: "var(--primary)",
             colorText: "var(--foreground-muted)",
+            colorPrimaryHover: "color-mix(in srgb, var(--primary) 85%, white)",
           },
           InputNumber: {
             colorPrimary: "var(--primary)",
+            hoverBorderColor: "var(--primary)",
           },
           Button: {
             colorPrimary: "var(--primary)",
+            colorPrimaryHover: "color-mix(in srgb, var(--primary) 85%, white)",
+            colorPrimaryActive:
+              "color-mix(in srgb, var(--primary) 80%, black 20%)",
             borderRadiusLG: 99,
+            defaultHoverBorderColor: "var(--primary)",
           },
         },
       }}
