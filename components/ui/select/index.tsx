@@ -8,6 +8,14 @@ export const Select = (props: SelectProps) => {
       {...props}
       className={cn("custom-select", props.className)}
       style={{ ...props.style }}
+      styles={{
+        popup: {
+          root: {
+            minWidth: 300,
+            padding: 10,
+          },
+        },
+      }}
     />
   );
 };

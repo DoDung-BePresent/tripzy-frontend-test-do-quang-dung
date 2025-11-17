@@ -33,10 +33,10 @@ export const BusAndShuttleForm = () => {
     value: `${location.short_code} - ${location.english_name}`,
     label: (
       <div className="flex flex-col">
-        <span className="font-medium">
+        <span className="font-semibold">
           {location.short_code} - {location.english_name}
         </span>
-        <span className="text-foreground-secondary text-xs">
+        <span className="text-foreground-muted text-xs">
           {location.code_state}
         </span>
       </div>
