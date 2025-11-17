@@ -28,34 +28,41 @@ npm run build
 npm start
 ```
 
-## Project Overview
+## Tech Stack
 
-- **Framework:** Next.js (App Router, React 19)
-- **UI Library:** Ant Design v5 (customized with ConfigProvider and Tailwind)
-- **Styling:** Tailwind CSS (utility classes, custom variables in `globals.css`)
-- **Icons:** Custom SVG icons via SVGR, organized in [`assets/icons`](assets/icons)
-- **Forms:** Ant Design Form, Select, DatePicker, InputNumber, Checkbox, Button
-- **State:** React hooks for local state management
-- **Tabs:** Custom Tabs component ([`components/ui/tabs.tsx`](components/ui/tabs.tsx))
-- **Data:** Locations loaded from local JSON ([`data/locations.json`](data/locations.json))
-- **Routing:** Form submits to `/search` with query params, results shown using `useSearchParams`
-- **Font:** Nunito Sans via `next/font/google`
-- **Theme:** Ant Design theme tokens set in [`providers/ant-config-provider.tsx`](providers/ant-config-provider.tsx)
+- **Framework**: Next.js
+- **Language**: TypeScript
+- **UI**: React
+- **Styling**: Tailwind CSS
+- **Library component**: Ant Design (v5)
+- **Icons**: Custom SVG Icons
+
+## Key Technical Decisions
+
+### Why I chose Next.js & TypeScript
+
+I chose Next.js because it provides a powerful React experience with routing, has a clear and easy-to-use system structure, and optimizes for SEO with flexible rendering options (SSR, SSG, ISR). TypeScript is used to provide type safety and improve the developer experience.
+
+### About Component UI
+
+For this project, I chose Ant Design as the primary component library. It offers a rich set of high-quality components that cover complex use cases like Date Pickers and advanced Select inputs out-of-the-box. This allows for rapid development while ensuring a consistent and professional look. The components are also highly customizable through its theming provider and styling APIs, which I've used to align the UI with the project's design requirements.
 
 ## Demo
 
-> [Vercel Demo Link](https://your-vercel-demo-url.vercel.app)  
-> _(Replace with your actual link if available)_
+> [Vercel Demo Link](https://tripzy-frontend-test-do-quang-dung.vercel.app/)
 
 ## Folder Structure
 
-- `app/` - Next.js app directory
-- `components/` - UI components (form, tabs, icons, etc.)
-- `constants/` - Static data and icon registry
-- `data/` - Local JSON data
-- `assets/icons/` - SVG icon files
-- `libs/` - Utility functions
-- `providers/` - Context and config providers
+- `app/` - The Next.js app directory. It contains `globals.css`, which defines reusable color variables and global styles.
+- `components/` - Contains all React components.
+  - `ui/` - This directory is key to the project's architecture. It holds **wrapper components** designed to customize Ant Design's default components. Each component (e.g., `date-picker`, `select`, `input-number`, v.v) is organized into its own folder, which includes:
+    - `index.tsx`: The wrapper component that imports the original Ant Design component and applies custom props, structure, and logic.
+    - `style.css`: A dedicated CSS file for component-specific style overrides.
+- `constants/` - Contains static data such as `locations.ts` and `icons.ts`.
+- `data/` - Contains local JSON data files.
+- `assets/icons/` - Contains all SVG icon files.
+- `libs/` - Contains utility functions.
+- `providers/` - Contains global context providers. The `ant-config-provider.tsx` file is central to the styling strategy, setting up a global theme for all Ant Design components and using color variables from `globals.css` to ensure design system consistency.
 
 ---
 

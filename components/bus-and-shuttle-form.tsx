@@ -229,7 +229,7 @@ export const BusAndShuttleForm = () => {
             name="passengers"
             initialValue={1}
             rules={[
-              { required: true, message: "Please enter number of passengers" },
+              { required: true, message: "Passengers required" },
               {
                 type: "number",
                 min: 1,
