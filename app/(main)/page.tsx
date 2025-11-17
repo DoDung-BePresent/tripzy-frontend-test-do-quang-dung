@@ -23,7 +23,7 @@ const HomePage = () => {
             <TabsList>
               <TabsTrigger
                 value="bus-and-shuttle"
-                className="data-[state=active]:bg-primary-light"
+                className="data-[state=active]:bg-primary-light hover:bg-primary-light"
               >
                 <span className="bg-primary-dark rounded-full p-3">
                   <Icon name="bus" className="text-primary" />
@@ -32,7 +32,7 @@ const HomePage = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="hotel-and-accommodation"
-                className="data-[state=active]:bg-secondary-light"
+                className="data-[state=active]:bg-secondary-light hover:bg-secondary-light"
               >
                 <span className="bg-secondary rounded-full p-3">
                   <Icon name="hotel" className="text-secondary-dark" />
@@ -41,7 +41,7 @@ const HomePage = () => {
               </TabsTrigger>
               <TabsTrigger
                 value="flight"
-                className="data-[state=active]:bg-tertiary-light"
+                className="data-[state=active]:bg-tertiary-light hover:bg-tertiary-light"
               >
                 <span className="bg-tertiary rounded-full p-3">
                   <Icon name="plane" className="text-tertiary-dark" />

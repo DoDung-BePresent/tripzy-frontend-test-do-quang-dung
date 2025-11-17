@@ -46,6 +46,19 @@
       .ant-picker-cell-inner {
       color: var(--danger);
     }
+    .ant-picker-panels {
+      .ant-picker-panel .ant-picker-header-view {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+      }
+      .ant-picker-panel:nth-child(1) .ant-picker-header-view {
+        justify-content: flex-start;
+      }
+      .ant-picker-panel:nth-child(2) .ant-picker-header-view {
+        justify-content: flex-end;
+      }
+    }
     .ant-picker-content
       tbody
       tr
@@ -54,6 +67,9 @@
       )
       .ant-picker-cell-inner {
       color: white;
+    }
+    .ant-picker-content thead tr th {
+      color: var(--foreground-muted);
     }
   }
 }

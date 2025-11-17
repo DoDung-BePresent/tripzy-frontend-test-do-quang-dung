@@ -1,4 +1,6 @@
-.ant-input-number.custom-input-number .ant-input-number-handler-wrap {
+.custom-input-number {
+}
+.ant-input-number .ant-input-number-handler-wrap {
   width: 22px !important;
   opacity: 1 !important;
 }

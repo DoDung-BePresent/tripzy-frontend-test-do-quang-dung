@@ -13,6 +13,20 @@ import React, { useEffect, useState } from "react";
  */
 dayjs.updateLocale("en", {
   weekStart: 1,
+  monthsShort: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
 });
 
 /**
