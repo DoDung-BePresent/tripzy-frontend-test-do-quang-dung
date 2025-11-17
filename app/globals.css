@@ -67,3 +67,8 @@
     font-family: var(--font-nuntio-sans), sans-serif;
   }
 }
+
+/* ANT DESIGN */
+.ant-form .ant-form-item-required::before {
+  display: none !important;
+}
