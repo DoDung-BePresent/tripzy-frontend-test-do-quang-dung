@@ -112,6 +112,7 @@ export const BusAndShuttleForm = () => {
         >
           <Select
             showSearch
+            optionLabelProp="value"
             prefix={<Icon name="bus" size={20} className="mr-2 ml-1" />}
             suffixIcon={null}
             options={locationOptions}
@@ -130,7 +131,7 @@ export const BusAndShuttleForm = () => {
           icon={
             <Icon name="transfer" size={20} className="text-primary! mt-1" />
           }
-          className="shadow-level-2! border-none!"
+          className="shadow-level-2!"
           onClick={() => {
             const from = form.getFieldValue("from");
             const to = form.getFieldValue("to");
@@ -145,6 +146,7 @@ export const BusAndShuttleForm = () => {
         >
           <Select
             showSearch
+            optionLabelProp="value"
             prefix={<Icon name="bus" size={20} className="mr-2 ml-1" />}
             suffixIcon={null}
             options={locationOptions}

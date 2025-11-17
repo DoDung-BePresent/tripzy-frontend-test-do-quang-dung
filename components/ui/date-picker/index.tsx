@@ -1,7 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { DatePicker as AntDatePicker } from "antd";
+/**
+ * Node modules
+ */
+import dayjs from "dayjs";
+import updateLocale from "dayjs/plugin/updateLocale";
+dayjs.extend(updateLocale);
 import type { DatePickerProps } from "antd";
+import { DatePicker as AntDatePicker } from "antd";
+import React, { useEffect, useState } from "react";
+
+/**
+ * Setup Dayjs
+ */
+dayjs.updateLocale("en", {
+  weekStart: 1,
+});
+
+/**
+ * Libs
+ */
 import { cn } from "@/libs/cn";
+
+/**
+ * Styles
+ */
 import "./style.css";
 
 const RangePicker = (AntDatePicker as any).RangePicker;
@@ -22,10 +43,7 @@ export const DatePicker = (props: DatePickerProps) => {
       setSelected(picked);
 
       try {
-        onChange?.(
-          picked,
-          picked ? picked.format?.("YYYY-MM-DD") : "",
-        );
+        onChange?.(picked, picked ? picked.format?.("YYYY-MM-DD") : "");
       } catch {
         onChange?.(picked);
       }
@@ -50,6 +68,8 @@ export const DatePicker = (props: DatePickerProps) => {
       <RangePicker
         {...(rest as any)}
         open={open}
+        superNextIcon={null}
+        superPrevIcon={null}
         onOpenChange={(o: boolean) => setOpen(o)}
         allowEmpty={[true, true]}
         value={selected ? [selected, null] : [null, null]}
