@@ -47,12 +47,10 @@ export const BusAndShuttleForm = () => {
     try {
       setLoading(true);
 
-      // Validate form
       const values = await form.validateFields();
 
       const { from, to, departureDate, returnDate, passengers } = values;
 
-      // Additional validation
       if (!from || !to) {
         message.error("Please select both From and To locations");
         return;
@@ -68,7 +66,6 @@ export const BusAndShuttleForm = () => {
         return;
       }
 
-      // Validate return date >= departure date
       if (
         isRoundTrip &&
         returnDate &&
@@ -83,7 +80,6 @@ export const BusAndShuttleForm = () => {
         return;
       }
 
-      // Build query params
       const params = new URLSearchParams({
         mode: "bus",
         from: from,
@@ -96,10 +92,8 @@ export const BusAndShuttleForm = () => {
         pax: String(passengers),
       });
 
-      // Navigate to search page
       router.push(`/search?${params.toString()}`);
     } catch (error) {
-      console.error("Form validation failed:", error);
       message.error("Please fill in all required fields correctly");
     } finally {
       setLoading(false);
