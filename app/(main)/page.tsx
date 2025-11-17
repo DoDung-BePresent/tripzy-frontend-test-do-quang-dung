@@ -50,7 +50,7 @@ const HomePage = () => {
               </TabsTrigger>
             </TabsList>
           </div>
-          <div className="">
+          <div className="min-h-52">
             <TabsContent value="bus-and-shuttle">
               <BusAndShuttleForm />
             </TabsContent>
