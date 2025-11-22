@@ -1,6 +1,6 @@
 .custom-input-number {
 }
-.ant-input-number .ant-input-number-handler-wrap {
+:global(.ant-input-number .ant-input-number-handler-wrap) {
   width: 22px !important;
   opacity: 1 !important;
 }

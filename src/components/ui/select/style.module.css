@@ -1,0 +1,6 @@
+.custom-select {
+}
+
+:global(.ant-select-dropdown .rc-virtual-list-scrollbar-thumb) {
+  width: 60% !important;
+}

@@ -37,7 +37,7 @@ import { cn } from "@/libs/cn";
 /**
  * Styles
  */
-import "./style.css";
+import styles from "./style.module.css";
 
 const RangePicker = (AntDatePicker as any).RangePicker;
 
@@ -90,7 +90,7 @@ export const DatePicker = (props: DatePickerProps) => {
         onCalendarChange={handleCalendarChange}
         onChange={handleChange}
         showTime={showTime}
-        className={cn("custom-datepicker", className)}
+        className={cn(styles["custom-datepicker"], className)}
         style={{ ...(style as React.CSSProperties) }}
         picker="date"
       />

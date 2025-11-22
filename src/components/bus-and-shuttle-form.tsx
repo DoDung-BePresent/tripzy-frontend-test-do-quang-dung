@@ -49,39 +49,7 @@ export const BusAndShuttleForm = () => {
       setLoading(true);
 
       const values = await form.validateFields();
-
       const { from, to, departureDate, returnDate, passengers } = values;
-
-      if (!from || !to) {
-        messageApi.error("Please select both From and To locations");
-        return;
-      }
-
-      if (!departureDate) {
-        messageApi.error("Please select departure date");
-        return;
-      }
-
-      if (isRoundTrip && !returnDate) {
-        messageApi.error("Please select return date for round trip");
-        return;
-      }
-
-      if (
-        isRoundTrip &&
-        returnDate &&
-        (returnDate as Dayjs).isBefore(departureDate as Dayjs)
-      ) {
-        messageApi.error(
-          "Return date must be after or equal to departure date",
-        );
-        return;
-      }
-
-      if (!passengers || passengers < 1) {
-        messageApi.error("Number of passengers must be at least 1");
-        return;
-      }
 
       const params = new URLSearchParams({
         mode: "bus",
@@ -97,6 +65,7 @@ export const BusAndShuttleForm = () => {
 
       router.push(`/search?${params.toString()}`);
     } catch (error) {
+      console.log(error);
       messageApi.error("Please fill in all required fields correctly");
     } finally {
       setLoading(false);
@@ -206,9 +175,7 @@ export const BusAndShuttleForm = () => {
                   const dep = form.getFieldValue("departureDate");
                   if (!dep) return Promise.resolve();
                   if (value.isBefore(dep, "day")) {
-                    return Promise.reject(
-                      new Error("Invalid return date"),
-                    );
+                    return Promise.reject(new Error("Invalid return date"));
                   }
                   return Promise.resolve();
                 },

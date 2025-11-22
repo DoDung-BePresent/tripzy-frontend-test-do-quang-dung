@@ -1,12 +1,23 @@
+/**
+ * Node modules
+ */
 import { InputNumber as AntInputNumber, InputNumberProps } from "antd";
+
+/**
+ * Libs
+ */
 import { cn } from "@/libs/cn";
-import "./style.css";
+
+/**
+ * Styles
+ */
+import styles from "./style.module.css";
 
 export const InputNumber = (props: InputNumberProps) => {
   return (
     <AntInputNumber
       {...props}
-      className={cn("custom-input-number", props.className)}
+      className={cn(styles["custom-input-number"], props.className)}
       style={{ ...props.style }}
     />
   );
