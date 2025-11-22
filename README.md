@@ -33,7 +33,7 @@ npm start
 - **Framework**: Next.js
 - **Language**: TypeScript
 - **UI**: React
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS & CSS Modules
 - **Library component**: Ant Design (v5)
 - **Icons**: Custom SVG Icons
 
@@ -55,31 +55,33 @@ For this project, I chose Ant Design as the primary component library. It offers
 
 ```
 .
-├── app/
-│   └── globals.css
-├── components/
-│   └── ui/
-│       ├── date-picker/
-│       │   ├── index.tsx
-│       │   └── style.css
-│       └── ... (other wrapped components)
-├── constants/
-│   ├── locations.ts
-│   └── icons.ts
-├── data/
-│   └── locations.json
-├── assets/
-│   └── icons/
-├── libs/
-└── providers/
-    └── ant-config-provider.tsx
+└── src/
+    ├── app/
+    │   └── globals.css
+    ├── components/
+    │   └── ui/
+    │       ├── date-picker/
+    │       │   ├── index.tsx
+    │       │   └── style.module.css
+    │       └── ... (other wrapped components)
+    ├── constants/
+    │   ├── locations.ts
+    │   └── icons.ts
+    ├── data/
+    │   └── locations.json
+    ├── assets/
+    │   └── icons/
+    ├── libs/
+    └── providers/
+        └── ant-config-provider.tsx
 ```
 
+- `src/` - The main source code directory, containing all application logic and assets.
 - `app/` - The Next.js app directory. It contains `globals.css`, which defines reusable color variables and global styles.
 - `components/` - Contains all React components.
-  - `ui/` - This directory is key to the project's architecture. It holds **wrapper components** designed to customize Ant Design's default components. Each component (e.g., `date-picker`, `select`, `input-number`, v.v) is organized into its own folder, which includes:
+  - `ui/` - This directory is key to the project's architecture. It holds **wrapper components** designed to customize Ant Design's default components. Each component (e.g., `date-picker`, `select`) is organized into its own folder, which includes:
     - `index.tsx`: The wrapper component that imports the original Ant Design component and applies custom props, structure, and logic.
-    - `style.css`: A dedicated CSS file for component-specific style overrides.
+    - `style.module.css`: A dedicated **CSS Module** file for component-specific, locally-scoped style overrides. This prevents class name collisions.
 - `constants/` - Contains static data such as `locations.ts` and `icons.ts`.
 - `data/` - Contains local JSON data files.
 - `assets/icons/` - Contains all SVG icon files.
