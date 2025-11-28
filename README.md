@@ -1,6 +1,7 @@
 # Tripzy Frontend
 
 Hi! This is a technical interview test for Tripzy, built with Next.js, Ant Design v5, and Tailwind CSS.
+**P/S:** _I failed the interview for this position :<_
 
 ## Getting Started
 
